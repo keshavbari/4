@@ -1,0 +1,23 @@
+#Files and Directories
+#Write,Append,Reading
+with open("test.txt", "w") as file:
+    file.write("Hello, World!")
+with open("test.txt", "a") as file:
+    file.write("\nAppending text")
+with open("test.txt", "r") as file:
+    content = file.read()
+print(content)
+
+#File Paths and Operations
+import os
+print(os.path.isfile("test.txt"))
+print(os.path.getsize("test.txt"))
+os.rename("test.txt", "new_test.txt")
+os.remove("new_test.txt")
+
+#Regular Expressions
+import re
+text = "The rain in Spain"
+pattern = re.search("rain", text)
+if pattern:
+    print("Pattern found!")

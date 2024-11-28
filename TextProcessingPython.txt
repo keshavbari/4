@@ -1,0 +1,11 @@
+#Text Processing and Searching Files
+with open("test.txt", "r") as file:
+    for line in file:
+        if "Hello" in line:
+            print("Found 'Hello'")
+
+#HTML Parsing
+from bs4 import BeautifulSoup
+html_doc = "<html><body><h1>Hello, World!</h1></body></html>"
+soup = BeautifulSoup(html_doc, 'html.parser')
+print(soup.h1.string)
